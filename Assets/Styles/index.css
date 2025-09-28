@@ -119,7 +119,7 @@ header .header-tittle i:hover {
 header .header-bottom {
   background: rgba(255, 255, 255, 0.103);
   min-height: 10vh;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -180,7 +180,7 @@ header .header-bottom .header-social {
 }
 
 main {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   background: white;
 }
@@ -336,7 +336,7 @@ main .main-bottom .bottom .bottom-btn button:hover {
 footer {
   margin-top: 20px;
   background: rgb(160, 156, 156);
-  width: 80%;
+  width: 90%;
   margin: 20px auto 0 auto;
   display: grid;
   grid-template-columns: 50% 50%;
