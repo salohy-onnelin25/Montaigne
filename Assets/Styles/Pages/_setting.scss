@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+@font-face {
+    font-family: Inter-ExtraBold;
+    src: url(../../Fonts/Inter_18pt-ExtraBold.ttf);
+}
+$font1: Inter-ExtraBold, sans-serif;
+
+@font-face {
+    font-family: Inter-Regular;
+    src: url(../../Fonts/Inter_24pt-Regular.ttf);
+}
+$font2: Inter-Regular, serif;
+
+$white: white;
+$white1: rgba(255, 255, 255, 0.103);
+$black: black;
+$black1: rgb(99, 97, 97);
+$gray: rgb(160, 156, 156);
+$gray1: rgba(160, 156, 156, 0.596);
+
+@mixin background-img($url, $size: cover, $position: center, $repeat: no-repeat, $attachment: scroll) {
+    background-image: url(#{$url});
+    background-size: $size;
+    background-position: $position;
+    background-repeat: $repeat;
+    background-attachment: $attachment;
+}
+
+body {
+    @include background-img("../Imgs/bg.jpg", cover, center, no-repeat, fixed);
+    a,
+    i {
+        color: $white;
+        text-decoration: none;
+        font-size: clamp(1rem, 1.3vw, 1.6rem);
+    }
+    p {
+        font-size: clamp(1rem, 1.3vw, 1.6rem);
+    }
+    h2 {
+        font-size: clamp(2rem, 2.5vw, 3rem);
+    }
+    h3 {
+        font-size: clamp(1.3rem, 1.6vw, 1.9rem);
+    }
+}

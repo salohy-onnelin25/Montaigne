@@ -1,0 +1,117 @@
+main {
+    width: 80%;
+    margin: 0 auto;
+    background: $white;
+    .main-top {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 0;
+        .headline-date {
+            width: 80%;
+            margin: 0 auto;
+            p {
+                display: flex;
+                position: relative;
+                margin: 0 10px;
+                align-items: center;
+                &::before,
+                &::after {
+                    content: "";
+                    flex: 1;
+                    height: 1px;
+                    background: #000;
+                    margin: 0 10px;
+                }
+            }
+        }
+        .headline-titre {
+            width: 50%;
+            margin: 0 auto;
+            h2 {
+                margin: 40px 0;
+            }
+            p {
+                font-family: $font1;
+            }
+        }
+        .headline_img {
+            height: 500px;
+            width: 80%;
+            @include background-img("../Imgs/pic01.jpg", cover, center, no-repeat, scroll);
+            margin: 40px auto;
+        }
+        .headline-btn {
+            button {
+                padding: 10px 20px;
+                font-size: clamp(0.8rem, 1vw, 1.2rem);
+                background: none;
+                font-weight: bold;
+                text-transform: uppercase;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+                &:hover {
+                    background: $black;
+                    color: $white;
+                }
+            }
+        }
+    }
+    .main-bottom {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        @media (max-width: 800px) {
+            display: flex;
+            flex-direction: column;
+        }
+        .bottom {
+            border: 1px solid $black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            padding: 20px 40px;
+            .bottom-tittle {
+                h3 {
+                    margin: 20px 0;
+                }
+            }
+            .bottom-img1 {
+                height: 300px;
+                width: 80%;
+                margin: 0 auto;
+                @include background-img("../Imgs/pic02.jpg", cover, center, no-repeat, scroll);
+            }
+            .bottom-img2 {
+                height: 300px;
+                width: 80%;
+                margin: 0 auto;
+                @include background-img("../Imgs/pic03.jpg", cover, center, no-repeat, scroll);
+            }
+            .bottom-p {
+                p {
+                    margin: 20px 0;
+                }
+            }
+            .bottom-btn {
+                margin-top: auto;
+                button {
+                    margin: 0px 0;
+                    padding: 10px 20px;
+                    font-size: clamp(0.8rem, 1vw, 1.2rem);
+                    background: none;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    transition: transform 0.3s ease;
+                    &:hover {
+                        background: $black;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}

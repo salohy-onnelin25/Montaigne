@@ -1,0 +1,96 @@
+footer {
+    margin-top: 20px;
+    background: $gray;
+    width: 80%;
+    margin: 20px auto 0 auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border: 1px solid $black;
+    @media (max-width: 1120px){
+        display: flex;
+        flex-direction: column;
+    }
+    form {
+        border: 0.01px solid $black1;
+        padding: 20px;
+        display: grid;
+        gap: 10px;
+        background: none;
+        label {
+            font-size: clamp(1rem, 1.2vw, 1.4rem);
+            font-weight: bold;
+        }
+        input {
+            width: 80%;
+            padding: 10px 20px;
+            background: none;
+        }
+        textarea {
+            width: 80%;
+            resize: none;
+            height: 200px;
+            background: none;
+        }
+        input[type="submit"] {
+            min-width: 40%;
+            margin-top: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            &:hover {
+                background: $black;
+                color: $white;
+            }
+        }
+    }
+    .footer-right {
+        display: grid;
+        padding: 10px;
+        gap: 40px;
+        .right{
+            border: 0.01px solid $black1;
+            padding:50px 10px ;
+        }
+        .right-right {
+            
+            display: flex;
+            gap: 10px;
+            i {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background: none;
+                border: 1px dashed $white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                animation: bounce 1.5s infinite;
+                transition: transform 0.3s ease;
+                &:hover {
+                    background: $white;
+                    color: $black;
+                }
+
+                @keyframes bounce {
+                    0%,
+                    100% {
+                        transform: translateY(0);
+                    }
+                    50% {
+                        transform: translateY(-10px);
+                    }
+                }
+            }
+        }
+        .right {
+            display: grid;
+            grid-template-columns: 20% 80%;
+            align-items: center;
+            font-size: clamp(1rem, 1.2vw, 1.4rem);
+            .right-left {
+                font-weight: bold;
+            }
+        }
+    }
+}
