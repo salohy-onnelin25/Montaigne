@@ -46,6 +46,16 @@ header {
                 }
             }
         }
+        .header-icon {
+            transition:
+                opacity 0.3s ease,
+                visibility 0.3s ease;
+        }
+
+        .is-hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
     }
     .header-bottom {
         background: $white1;
@@ -56,6 +66,17 @@ header {
         justify-content: space-between;
         flex-direction: row;
         align-items: center;
+        &.is-sticky {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            background: $gray;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            margin: 0;
+        }
         i {
             transition: transform 0.3s ease;
             &:hover {
@@ -65,7 +86,7 @@ header {
         .header-a {
             display: flex;
             flex-direction: row;
-            
+
             a {
                 padding: 30px 10px;
                 transition: all 0.3s ease;
@@ -80,7 +101,7 @@ header {
             flex-direction: row;
             gap: 10px;
             padding-right: 10px;
-            @media (max-width: 500px){
+            @media (max-width: 500px) {
                 display: none;
             }
         }

@@ -116,6 +116,14 @@ header .header-tittle i:hover {
             transform: translateY(-10px);
   }
 }
+header .header-tittle .header-icon {
+  -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+header .header-tittle .is-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
 header .header-bottom {
   background: rgba(255, 255, 255, 0.103);
   min-height: 10vh;
@@ -134,6 +142,19 @@ header .header-bottom {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+header .header-bottom.is-sticky {
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background: rgb(160, 156, 156);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 90%;
+  margin: 0;
 }
 header .header-bottom i {
   -webkit-transition: -webkit-transform 0.3s ease;
